@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界探秘 - 火影忍者</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/world.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logos/konoha-logo.png" alt="木叶标志">
+                <span>火影忍者</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">忍者列传</a></li>
+                <li><a href="world.html" class="active">世界探秘</a></li>
+                <li><a href="jutsu.html">忍术卷轴</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h1>世界探秘</h1>
+            <p>探索忍者世界的奥秘与传说</p>
+        </div>
+    </header>
+
+    <!-- 第一屏：忍者世界交互地图 -->
+    <section class="world-map-section">
+        <div class="container">
+            <h2 class="section-title">忍者世界地图</h2>
+            <div class="map-container">
+                <div class="world-map">
+                    <img src="images/world_maps/ninja-world-map.jpg" alt="忍者世界地图">
+                    
+                    <!-- 五大国标记 -->
+                    <div class="location-marker fire-country" data-location="fire">
+                        <div class="marker-icon">🔥</div>
+                        <div class="marker-info">
+                            <h3>火之国</h3>
+                            <p>木叶隐村所在地，拥有肥沃的土地和强大的忍者力量</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-marker wind-country" data-location="wind">
+                        <div class="marker-icon">🌪️</div>
+                        <div class="marker-info">
+                            <h3>风之国</h3>
+                            <p>砂隐村所在地，以沙漠地形和风遁忍术闻名</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-marker water-country" data-location="water">
+                        <div class="marker-icon">🌊</div>
+                        <div class="marker-info">
+                            <h3>水之国</h3>
+                            <p>雾隐村所在地，四面环海，擅长水遁和雾隐之术</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-marker earth-country" data-location="earth">
+                        <div class="marker-icon">🗻</div>
+                        <div class="marker-info">
+                            <h3>土之国</h3>
+                            <p>岩隐村所在地，多山地形，土遁忍术发达</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-marker lightning-country" data-location="lightning">
+                        <div class="marker-icon">⚡</div>
+                        <div class="marker-info">
+                            <h3>雷之国</h3>
+                            <p>云隐村所在地，山峰险峻，雷遁忍术强大</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 特殊地点 -->
+                    <div class="location-marker special-location" data-location="valley-of-end">
+                        <div class="marker-icon">⚔️</div>
+                        <div class="marker-info">
+                            <h3>终结之谷</h3>
+                            <p>历史上无数次决战的圣地，柱间与斑的最终战场</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-marker special-location" data-location="mount-myoboku">
+                        <div class="marker-icon">🐸</div>
+                        <div class="marker-info">
+                            <h3>妙木山</h3>
+                            <p>蛤蟆仙人的圣地，修行仙术的神秘之地</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-legend">
+                    <h4>地图图例</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-color fire"></span>
+                            <span>火之国</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color wind"></span>
+                            <span>风之国</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color water"></span>
+                            <span>水之国</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color earth"></span>
+                            <span>土之国</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color lightning"></span>
+                            <span>雷之国</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color special"></span>
+                            <span>特殊地点</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：重大历史事件 -->
+    <section class="history-timeline">
+        <div class="container">
+            <h2 class="section-title">忍者世界历史</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-year="远古时代">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>六道仙人与大筒木</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/rikudou-sennin.jpg" alt="六道仙人">
+                        </div>
+                        <p>大筒木辉夜姬降临地球，六道仙人羽衣封印了十尾，创造了忍宗，将查克拉传播给世人。这是忍者历史的起源。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="战国时代">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>战国时代与忍者村建立</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/sengoku-period.jpg" alt="战国时代">
+                        </div>
+                        <p>千手柱间和宇智波斑结束了战国时代的混乱，建立了第一个忍者村——木叶隐村。这标志着忍者世界新时代的开始。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="第一次忍界大战">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>第一次忍界大战</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/first-ninja-war.jpg" alt="第一次忍界大战">
+                        </div>
+                        <p>各忍者村之间爆发了第一次大规模冲突，为了争夺尾兽和领土，五大国展开了激烈的战争。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="第二次忍界大战">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>第二次忍界大战</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/second-ninja-war.jpg" alt="第二次忍界大战">
+                        </div>
+                        <p>传说三忍名声大噪的战争，木叶白牙旗木朔茂活跃于战场，各村忍者实力得到了极大提升。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="第三次忍界大战">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>第三次忍界大战</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/third-ninja-war.jpg" alt="第三次忍界大战">
+                        </div>
+                        <p>波风水门的黄色闪光震慑忍界，卡卡西、凯等新一代忍者崭露头角，战争的残酷让人们更加渴望和平。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="九尾之乱">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>九尾之乱</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/kyubi-attack.jpg" alt="九尾之乱">
+                        </div>
+                        <p>神秘面具男控制九尾攻击木叶，四代火影波风水门和玖辛奈为了保护村子牺牲，将九尾封印在新生的鸣人体内。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="宇智波灭族">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>宇智波灭族事件</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/uchiha-massacre.jpg" alt="宇智波灭族">
+                        </div>
+                        <p>宇智波鼬在一夜之间灭族，只留下了弟弟佐助。这个事件的真相隐藏着深刻的政治阴谋和兄弟之爱。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="第四次忍界大战">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>第四次忍界大战</h3>
+                        <div class="timeline-image">
+                            <img src="images/historical_events/fourth-ninja-war.jpg" alt="第四次忍界大战">
+                        </div>
+                        <p>宇智波斑和宇智波带土发动的战争，目标是实现无限月读计划。最终鸣人和佐助联手，拯救了忍者世界。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：核心概念解析 -->
+    <section class="core-concepts">
+        <div class="container">
+            <h2 class="section-title">核心概念解析</h2>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <img src="images/characters/naruto-small.jpg" alt="查克拉">
+                    </div>
+                    <h3>查克拉 (Chakra)</h3>
+                    <div class="concept-content">
+                        <p>查克拉是忍者施展忍术的基础能量，由身体能量和精神能量结合而成。</p>
+                        <div class="concept-details">
+                            <h4>查克拉属性</h4>
+                            <div class="chakra-nature">
+                                <div class="nature-item fire">🔥 火遁</div>
+                                <div class="nature-item water">🌊 水遁</div>
+                                <div class="nature-item earth">🗻 土遁</div>
+                                <div class="nature-item wind">🌪️ 风遁</div>
+                                <div class="nature-item lightning">⚡ 雷遁</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <img src="images/characters/kakashi-small.jpg" alt="忍者等级">
+                    </div>
+                    <h3>忍者等级 (Ninja Ranks)</h3>
+                    <div class="concept-content">
+                        <p>忍者按照实力和经验分为不同等级，每个等级都有其职责和权限。</p>
+                        <div class="concept-details">
+                            <h4>等级体系</h4>
+                            <div class="rank-system">
+                                <div class="rank-item">
+                                    <span class="rank-badge genin">下忍</span>
+                                    <span class="rank-desc">初级忍者</span>
+                                </div>
+                                <div class="rank-item">
+                                    <span class="rank-badge chunin">中忍</span>
+                                    <span class="rank-desc">中级忍者</span>
+                                </div>
+                                <div class="rank-item">
+                                    <span class="rank-badge jonin">上忍</span>
+                                    <span class="rank-desc">高级忍者</span>
+                                </div>
+                                <div class="rank-item">
+                                    <span class="rank-badge kage">影</span>
+                                    <span class="rank-desc">村子领导</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <img src="images/characters/naruto-small.jpg" alt="一乐拉面">
+                    </div>
+                    <h3>一乐拉面 (Ichiraku Ramen)</h3>
+                    <div class="concept-content">
+                        <p>木叶村最著名的拉面店，是鸣人最喜欢的地方，也是火影文化的重要象征。</p>
+                        <div class="concept-details">
+                            <h4>特色拉面</h4>
+                            <div class="ramen-menu">
+                                <div class="menu-item">🍜 味增拉面</div>
+                                <div class="menu-item">🍜 豚骨拉面</div>
+                                <div class="menu-item">🍜 酱油拉面</div>
+                                <div class="menu-item">🍜 特制拉面</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <img src="images/characters/itachi-small.jpg" alt="暗部">
+                    </div>
+                    <h3>暗部 (Anbu)</h3>
+                    <div class="concept-content">
+                        <p>暗杀战术特殊部队，直接听命于火影，执行最危险和机密的任务。</p>
+                        <div class="concept-details">
+                            <h4>暗部特征</h4>
+                            <div class="anbu-features">
+                                <div class="feature-item">🎭 动物面具</div>
+                                <div class="feature-item">⚔️ 精湛技艺</div>
+                                <div class="feature-item">🤐 绝对保密</div>
+                                <div class="feature-item">💀 危险任务</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>火影忍者</h4>
+                    <p>传承火之意志，探索忍者世界</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="characters.html">忍者列传</a></li>
+                        <li><a href="jutsu.html">忍术卷轴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>Email: info@naruto-world.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 火影忍者主题网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/world.js"></script>
+</body>
+</html>

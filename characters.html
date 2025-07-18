@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忍者列传 - 火影忍者</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/characters.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logos/konoha-logo.png" alt="木叶标志">
+                <span>火影忍者</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html" class="active">忍者列传</a></li>
+                <li><a href="world.html">世界探秘</a></li>
+                <li><a href="jutsu.html">忍术卷轴</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h1>忍者列传</h1>
+            <p>探索火影世界中的传奇忍者们</p>
+        </div>
+    </header>
+
+    <!-- 第一屏：阵营与组织 -->
+    <section class="factions-section">
+        <div class="container">
+            <h2 class="section-title">阵营与组织</h2>
+            <div class="factions-grid">
+                <div class="faction-card" data-faction="konoha">
+                    <div class="faction-icon">
+                        <img src="images/logos/konoha-symbol.png" alt="木叶标志">
+                    </div>
+                    <h3>木叶隐村</h3>
+                    <p>火之国最强的忍者村，诞生了无数传奇忍者</p>
+                    <div class="faction-members">
+                        <div class="member-preview">
+                            <img src="images/characters/naruto-small.jpg" alt="鸣人">
+                            <img src="images/characters/sasuke-small.jpg" alt="佐助">
+                            <img src="images/characters/sakura-small.jpg" alt="小樱">
+                            <img src="images/characters/kakashi-small.jpg" alt="卡卡西">
+                        </div>
+                        <span class="member-count">+15 位忍者</span>
+                    </div>
+                </div>
+
+                <div class="faction-card" data-faction="akatsuki">
+                    <div class="faction-icon">
+                        <img src="images/logos/akatsuki-symbol.png" alt="晓组织标志">
+                    </div>
+                    <h3>晓组织</h3>
+                    <p>神秘的S级叛忍组织，目标是收集所有尾兽</p>
+                    <div class="faction-members">
+                        <div class="member-preview">
+                            <img src="images/characters/pain-small.jpg" alt="佩恩">
+                            <img src="images/characters/itachi-small.jpg" alt="鼬">
+                            <img src="images/characters/kisame-small.jpg" alt="鬼鲛">
+                            <img src="images/characters/deidara-small.jpg" alt="迪达拉">
+                        </div>
+                        <span class="member-count">+6 位成员</span>
+                    </div>
+                </div>
+
+                <div class="faction-card" data-faction="kage">
+                    <div class="faction-icon">
+                        <img src="images/logos/kage-symbol.png" alt="影标志">
+                    </div>
+                    <h3>五影会谈</h3>
+                    <p>五大忍者村的最高领导者，代表着最强实力</p>
+                    <div class="faction-members">
+                        <div class="member-preview">
+                            <img src="images/characters/naruto-small.jpg" alt="我爱罗">
+                            <img src="images/characters/sakura-small.jpg" alt="纲手">
+                            <img src="images/characters/kakashi-small.jpg" alt="雷影">
+                            <img src="images/characters/sasuke-small.jpg" alt="土影">
+                        </div>
+                        <span class="member-count">+3 位影</span>
+                    </div>
+                </div>
+
+                <div class="faction-card" data-faction="tailed-beasts">
+                    <div class="faction-icon">
+                        <img src="images/logos/tailed-beast-symbol.png" alt="尾兽标志">
+                    </div>
+                    <h3>尾兽与人柱力</h3>
+                    <p>拥有强大力量的尾兽及其人柱力</p>
+                    <div class="faction-members">
+                        <div class="member-preview">
+                            <img src="images/characters/naruto-small.jpg" alt="鸣人九尾">
+                            <img src="images/characters/naruto-small.jpg" alt="我爱罗一尾">
+                            <img src="images/characters/pain-small.jpg" alt="奇拉比">
+                            <img src="images/characters/itachi-small.jpg" alt="由木人">
+                        </div>
+                        <span class="member-count">+5 位人柱力</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：本周焦点人物 -->
+    <section class="featured-character">
+        <div class="container">
+            <h2 class="section-title">本周焦点人物</h2>
+            <div class="featured-content">
+                <div class="character-image">
+                    <img src="images/characters/itachi-featured.jpg" alt="宇智波鼬">
+                    <div class="character-overlay">
+                        <div class="character-stats">
+                            <div class="stat">
+                                <span class="stat-label">等级</span>
+                                <span class="stat-value">S级</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">村庄</span>
+                                <span class="stat-value">木叶隐村</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">血继限界</span>
+                                <span class="stat-value">写轮眼</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h3>宇智波鼬</h3>
+                    <p class="character-title">木叶的叛忍 / 暗部队长</p>
+                    <div class="character-quote">
+                        <p>"原谅我，佐助，这是最后一次了..."</p>
+                    </div>
+                    <div class="character-description">
+                        <p>宇智波鼬是宇智波一族的天才忍者，拥有超凡的实力和智慧。为了保护村子和弟弟佐助，他承担了灭族的罪名，成为了一个深藏不露的英雄。</p>
+                        <p>他的写轮眼能力举世无双，尤其是万花筒写轮眼的月读和天照，让他在忍界享有盛名。</p>
+                    </div>
+                    <div class="character-abilities">
+                        <h4>主要能力</h4>
+                        <div class="ability-tags">
+                            <span class="ability-tag">写轮眼</span>
+                            <span class="ability-tag">万花筒写轮眼</span>
+                            <span class="ability-tag">月读</span>
+                            <span class="ability-tag">天照</span>
+                            <span class="ability-tag">须佐能乎</span>
+                        </div>
+                    </div>
+                    <a href="#itachi-detail" class="btn-primary">查看完整档案</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：人物关系图谱 -->
+    <section class="relationship-map">
+        <div class="container">
+            <h2 class="section-title">人物关系图谱</h2>
+            <div class="map-container">
+                <div class="relationship-network">
+                    <!-- 中心节点 -->
+                    <div class="character-node center-node" data-character="naruto">
+                        <img src="images/characters/naruto-small.jpg" alt="鸣人">
+                        <span>鸣人</span>
+                    </div>
+                    
+                    <!-- 一级关系 -->
+                    <div class="character-node" data-character="sasuke" data-relation="rival">
+                        <img src="images/characters/sasuke-small.jpg" alt="佐助">
+                        <span>佐助</span>
+                    </div>
+                    
+                    <div class="character-node" data-character="sakura" data-relation="teammate">
+                        <img src="images/characters/sakura-small.jpg" alt="小樱">
+                        <span>小樱</span>
+                    </div>
+                    
+                    <div class="character-node" data-character="kakashi" data-relation="teacher">
+                        <img src="images/characters/kakashi-small.jpg" alt="卡卡西">
+                        <span>卡卡西</span>
+                    </div>
+                    
+                    <div class="character-node" data-character="jiraiya" data-relation="master">
+                        <img src="images/characters/pain-small.jpg" alt="自来也">
+                        <span>自来也</span>
+                    </div>
+                    
+                    <!-- 二级关系 -->
+                    <div class="character-node" data-character="itachi" data-relation="enemy">
+                        <img src="images/characters/itachi-small.jpg" alt="鼬">
+                        <span>鼬</span>
+                    </div>
+                    
+                    <div class="character-node" data-character="gaara" data-relation="friend">
+                        <img src="images/characters/naruto-small.jpg" alt="我爱罗">
+                        <span>我爱罗</span>
+                    </div>
+                    
+                    <div class="character-node" data-character="hinata" data-relation="love">
+                        <img src="images/characters/sakura-small.jpg" alt="雏田">
+                        <span>雏田</span>
+                    </div>
+                </div>
+                
+                <!-- 关系图例 -->
+                <div class="relationship-legend">
+                    <h4>关系类型</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-line rival"></div>
+                            <span>宿敌</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-line teammate"></div>
+                            <span>队友</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-line teacher"></div>
+                            <span>师徒</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-line master"></div>
+                            <span>师父</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-line friend"></div>
+                            <span>朋友</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-line love"></div>
+                            <span>恋人</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>火影忍者</h4>
+                    <p>传承火之意志，探索忍者世界</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="world.html">世界探秘</a></li>
+                        <li><a href="jutsu.html">忍术卷轴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>Email: info@naruto-world.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 火影忍者主题网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/characters.js"></script>
+</body>
+</html>

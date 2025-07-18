@@ -1,0 +1,171 @@
+/* 图片缺失时的后备样式 */
+
+/* 当图片加载失败时显示占位符 */
+img {
+    background-color: #2d2d2d;
+    border: 2px solid #ff6b00;
+    border-radius: 10px;
+    position: relative;
+}
+
+img::before {
+    content: '🖼️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #ff6b00;
+}
+
+img::after {
+    content: '图片加载中...';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ccc;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* 为缺失的背景视频提供动画背景 */
+.hero-video {
+    background: linear-gradient(
+        45deg,
+        #ff6b00 0%,
+        #ff9500 25%,
+        #ffd700 50%,
+        #ff9500 75%,
+        #ff6b00 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 为缺失的忍术GIF提供替代动画 */
+.jutsu-visual img {
+    background: radial-gradient(circle, #8a2be2 0%, #9370db 100%);
+    animation: jutsuPulse 2s ease-in-out infinite;
+}
+
+@keyframes jutsuPulse {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.2); }
+}
+
+/* 角色头像占位符 */
+.hokage-image img,
+.character-node img,
+.member-preview img {
+    background: linear-gradient(135deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+}
+
+/* 地图占位符 */
+.world-map img {
+    background: linear-gradient(
+        135deg,
+        #2d2d2d 0%,
+        #1a1a1a 25%,
+        #2d2d2d 50%,
+        #1a1a1a 75%,
+        #2d2d2d 100%
+    );
+    border-radius: 15px;
+}
+
+/* 为缺失的标志图片提供文字替代 */
+.nav-logo img::after {
+    content: '🍃';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.faction-icon img::after {
+    content: '⚡';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/* 提供更好的无图片体验 */
+.no-image-fallback {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff6b00;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #ff6b00;
+}
+
+/* 加载动画 */
+.loading-placeholder {
+    background: linear-gradient(90deg, #2d2d2d 0%, #3d3d3d 50%, #2d2d2d 100%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* 确保网站在没有图片的情况下仍然美观 */
+.image-error {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* 为时间线图片提供图标替代 */
+.timeline-image img::after {
+    content: '📖';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 10px;
+    font-size: 3rem;
+}

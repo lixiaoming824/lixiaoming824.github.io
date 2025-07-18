@@ -1,0 +1,579 @@
+/* 世界探秘页面专用样式 */
+
+/* 页面头部 */
+.page-header {
+    background: linear-gradient(135deg, #00cc66, #00ff99);
+}
+
+.header-bg {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="world-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="80" cy="40" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="80" r="4" fill="rgba(255,255,255,0.15)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23world-pattern)"/></svg>');
+}
+
+/* 忍者世界地图 */
+.world-map-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.map-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.world-map {
+    position: relative;
+    background: #2d2d2d;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    min-height: 600px;
+}
+
+.world-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.location-marker {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.marker-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+    border: 3px solid #fff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.marker-info {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff6b00;
+}
+
+.marker-info::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ff6b00;
+}
+
+.location-marker:hover .marker-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.location-marker:hover .marker-icon {
+    transform: scale(1.2);
+    box-shadow: 0 12px 35px rgba(255, 107, 0, 0.6);
+}
+
+.marker-info h3 {
+    margin-bottom: 0.5rem;
+    color: #ff9500;
+    font-size: 1.1rem;
+}
+
+.marker-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* 地图标记位置 */
+.fire-country {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wind-country {
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.water-country {
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.earth-country {
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.lightning-country {
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.special-location[data-location="valley-of-end"] {
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.special-location[data-location="mount-myoboku"] {
+    top: 75%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.special-location .marker-icon {
+    background: linear-gradient(45deg, #9400d3, #ff1493);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 8px 25px rgba(148, 0, 211, 0.4); }
+    to { box-shadow: 0 12px 35px rgba(255, 20, 147, 0.6); }
+}
+
+/* 地图图例 */
+.map-legend {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    height: fit-content;
+    border: 2px solid #333;
+}
+
+.map-legend h4 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ccc;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.legend-color.fire {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+}
+
+.legend-color.wind {
+    background: linear-gradient(45deg, #ffff00, #ffd700);
+}
+
+.legend-color.water {
+    background: linear-gradient(45deg, #00bfff, #0099cc);
+}
+
+.legend-color.earth {
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+}
+
+.legend-color.lightning {
+    background: linear-gradient(45deg, #9370db, #8a2be2);
+}
+
+.legend-color.special {
+    background: linear-gradient(45deg, #9400d3, #ff1493);
+}
+
+/* 历史时间线 */
+.history-timeline {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.timeline {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #ff6b00, #ff9500);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+}
+
+.timeline-content {
+    flex: 1;
+    max-width: 45%;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #333;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -15px;
+    border-left: 15px solid #333;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -15px;
+    border-right: 15px solid #333;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 107, 0, 0.2);
+    border-color: #ff6b00;
+}
+
+.timeline-content h3 {
+    color: #ff9500;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover .timeline-image img {
+    transform: scale(1.05);
+}
+
+.timeline-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 核心概念解析 */
+.core-concepts {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.concept-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.concept-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.concept-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff6b00;
+    box-shadow: 0 20px 40px rgba(255, 107, 0, 0.2);
+}
+
+.concept-card:hover::before {
+    opacity: 0.1;
+}
+
+.concept-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+}
+
+.concept-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.concept-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.concept-content p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.concept-details h4 {
+    color: #ff9500;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.chakra-nature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.nature-item {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nature-item.fire {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+}
+
+.nature-item.water {
+    background: linear-gradient(45deg, #00bfff, #0099cc);
+}
+
+.nature-item.earth {
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+}
+
+.nature-item.wind {
+    background: linear-gradient(45deg, #ffff00, #ffd700);
+    color: #333;
+}
+
+.nature-item.lightning {
+    background: linear-gradient(45deg, #9370db, #8a2be2);
+}
+
+.rank-system {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rank-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.rank-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.rank-badge.genin {
+    background: linear-gradient(45deg, #00cc00, #66ff00);
+}
+
+.rank-badge.chunin {
+    background: linear-gradient(45deg, #00bfff, #0099cc);
+}
+
+.rank-badge.jonin {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+}
+
+.rank-badge.kage {
+    background: linear-gradient(45deg, #9400d3, #ff1493);
+}
+
+.rank-desc {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.ramen-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    padding: 0.5rem;
+    background: rgba(255, 107, 0, 0.1);
+    border-radius: 8px;
+    color: #ff9500;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.anbu-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.feature-item {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: #ccc;
+    font-size: 0.9rem;
+    border: 1px solid #333;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .timeline-content::before {
+        display: none;
+    }
+    
+    .concepts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chakra-nature {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .ramen-menu,
+    .anbu-features {
+        grid-template-columns: 1fr;
+    }
+}

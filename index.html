@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火影忍者 - 火之意志传承</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fallback.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logos/konoha-logo.png" alt="木叶标志">
+                <span>火影忍者</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="characters.html">忍者列传</a></li>
+                <li><a href="world.html">世界探秘</a></li>
+                <li><a href="jutsu.html">忍术卷轴</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 第一屏：主视觉 -->
+    <section id="home" class="hero-section">
+        <div class="hero-video">
+            <video autoplay muted loop>
+                <source src="videos/naruto-hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">火影忍者</h1>
+            <p class="hero-subtitle">只要有树叶飞舞的地方，火就会燃烧</p>
+            <p class="hero-subtitle-jp">木の葉の舞うところ、火は燃える</p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 第二屏：核心导航 -->
+    <section class="main-navigation">
+        <div class="container">
+            <h2 class="section-title">探索忍者世界</h2>
+            <div class="nav-cards">
+                <div class="nav-card" data-bg="images/backgrounds/characters-bg.jpg">
+                    <div class="card-content">
+                        <h3>忍者列传</h3>
+                        <p>深入了解鸣人、佐助、卡卡西等经典角色的成长历程</p>
+                        <a href="characters.html" class="card-link">进入</a>
+                    </div>
+                </div>
+                <div class="nav-card" data-bg="images/backgrounds/world-bg.jpg">
+                    <div class="card-content">
+                        <h3>世界探秘</h3>
+                        <p>探索五大国的地理、历史和文化奥秘</p>
+                        <a href="world.html" class="card-link">进入</a>
+                    </div>
+                </div>
+                <div class="nav-card" data-bg="images/backgrounds/jutsu-bg.jpg">
+                    <div class="card-content">
+                        <h3>忍术卷轴</h3>
+                        <p>收录各种忍术、体术、幻术的详细解析</p>
+                        <a href="jutsu.html" class="card-link">进入</a>
+                    </div>
+                </div>
+                <div class="nav-card" data-bg="images/backgrounds/moments-bg.jpg">
+                    <div class="card-content">
+                        <h3>经典瞬间</h3>
+                        <p>重温那些感动人心的经典场面</p>
+                        <a href="moments.html" class="card-link">进入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：火之意志传承 -->
+    <section class="will-of-fire">
+        <div class="parallax-bg"></div>
+        <div class="container">
+            <h2 class="section-title">火之意志传承</h2>
+            <div class="hokage-timeline">
+                <div class="timeline-item" data-hokage="1">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/hashirama.jpg" alt="千手柱间">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>初代火影 - 千手柱间</h3>
+                        <p>"村子里的每一个人都是我的家人"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="2">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/tobirama.jpg" alt="千手扉间">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>二代火影 - 千手扉间</h3>
+                        <p>"真正的改变需要时间和智慧"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="3">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/hiruzen.jpg" alt="猿飞日斩">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>三代火影 - 猿飞日斩</h3>
+                        <p>"忍者最重要的不是技术，而是忍耐"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="4">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/minato.jpg" alt="波风水门">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>四代火影 - 波风水门</h3>
+                        <p>"我相信总有一天，人们会理解彼此"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="5">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/tsunade.jpg" alt="纲手">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>五代火影 - 纲手</h3>
+                        <p>"保护重要的人，这就是我的忍道"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="6">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/kakashi.jpg" alt="旗木卡卡西">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>六代火影 - 旗木卡卡西</h3>
+                        <p>"违背规则的人是废物，但不珍惜同伴的人连废物都不如"</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-hokage="7">
+                    <div class="hokage-image">
+                        <img src="images/hokage_portraits/naruto.jpg" alt="漩涡鸣人">
+                    </div>
+                    <div class="hokage-info">
+                        <h3>七代火影 - 漩涡鸣人</h3>
+                        <p>"我绝对不会放弃！这就是我的忍道！"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="explore-btn">
+                <a href="#home" class="btn-primary">立即开始探索</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>火影忍者</h4>
+                    <p>传承火之意志，探索忍者世界</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="characters.html">忍者列传</a></li>
+                        <li><a href="world.html">世界探秘</a></li>
+                        <li><a href="jutsu.html">忍术卷轴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>Email: info@naruto-world.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 火影忍者主题网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

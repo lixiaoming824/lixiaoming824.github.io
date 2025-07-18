@@ -1,0 +1,832 @@
+/* 忍术卷轴页面专用样式 */
+
+/* 页面头部 */
+.page-header {
+    background: linear-gradient(135deg, #8a2be2, #9370db);
+}
+
+.header-bg {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="jutsu-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M50 20 L80 50 L50 80 L20 50 Z" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="70" cy="70" r="3" fill="rgba(255,255,255,0.15)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23jutsu-pattern)"/></svg>');
+}
+
+/* 标志性忍术展示 */
+.signature-jutsu {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.jutsu-showcase {
+    position: relative;
+    height: 500px;
+    margin-top: 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.jutsu-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.jutsu-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.jutsu-visual {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.jutsu-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jutsu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(138, 43, 226, 0.8) 0%,
+        rgba(147, 112, 219, 0.6) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jutsu-info {
+    text-align: center;
+    color: #fff;
+}
+
+.jutsu-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.jutsu-japanese {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #dda0dd;
+}
+
+.jutsu-rank {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.jutsu-description {
+    flex: 1;
+    padding: 3rem;
+    color: #fff;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.jutsu-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.hand-seals {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.hand-seals > span {
+    color: #8a2be2;
+    font-weight: 600;
+}
+
+.seal-sequence {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.seal {
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.seal-info {
+    color: #dda0dd;
+    font-style: italic;
+}
+
+.jutsu-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.jutsu-nav-btn {
+    background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+    color: #fff;
+    border: 2px solid #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.jutsu-nav-btn:hover,
+.jutsu-nav-btn.active {
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+    border-color: #8a2be2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+}
+
+/* 忍术分类 */
+.jutsu-categories {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+    color: #fff;
+    border: 2px solid #333;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+    border-color: #8a2be2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+}
+
+.category-content {
+    margin-top: 3rem;
+}
+
+.category-panel {
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+.category-panel.active {
+    display: block;
+}
+
+.category-panel h3 {
+    color: #8a2be2;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.category-panel > p {
+    color: #ccc;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 忍术元素卡片 */
+.element-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.element-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.element-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.element-card.fire::before {
+    background: linear-gradient(45deg, #ff6b00, #ff9500);
+}
+
+.element-card.water::before {
+    background: linear-gradient(45deg, #00bfff, #0099cc);
+}
+
+.element-card.earth::before {
+    background: linear-gradient(45deg, #8b4513, #a0522d);
+}
+
+.element-card.wind::before {
+    background: linear-gradient(45deg, #ffff00, #ffd700);
+}
+
+.element-card.lightning::before {
+    background: linear-gradient(45deg, #9370db, #8a2be2);
+}
+
+.element-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.element-card:hover::before {
+    opacity: 0.1;
+}
+
+.element-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.element-card h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.jutsu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.jutsu-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.jutsu-name {
+    color: #fff;
+    font-weight: 600;
+}
+
+.jutsu-user {
+    color: #8a2be2;
+    font-size: 0.9rem;
+}
+
+/* 体术卡片 */
+.taijutsu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.taijutsu-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+.taijutsu-card:hover {
+    transform: translateY(-5px);
+    border-color: #8a2be2;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.taijutsu-card h4 {
+    color: #8a2be2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.taijutsu-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.gates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gate {
+    padding: 0.8rem;
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.technique-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.technique {
+    padding: 0.8rem;
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 8px;
+    color: #dda0dd;
+    font-size: 0.9rem;
+}
+
+/* 幻术卡片 */
+.genjutsu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.genjutsu-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.genjutsu-card:hover {
+    transform: translateY(-5px);
+    border-color: #8a2be2;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.genjutsu-card h4 {
+    color: #8a2be2;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.genjutsu-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.jutsu-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.detail-label {
+    color: #8a2be2;
+    font-weight: 600;
+}
+
+.detail-value {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* 血继限界卡片 */
+.kekkei-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.kekkei-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+.kekkei-card:hover {
+    transform: translateY(-5px);
+    border-color: #8a2be2;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.kekkei-card h4 {
+    color: #8a2be2;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.kekkei-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.evolution-stages {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(138, 43, 226, 0.1);
+    border-radius: 10px;
+    color: #dda0dd;
+    font-weight: 500;
+}
+
+.abilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.ability {
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 瞳术卡片 */
+.dojutsu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dojutsu-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dojutsu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.dojutsu-card.sharingan::before {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+
+.dojutsu-card.byakugan::before {
+    background: linear-gradient(45deg, #ffffff, #cccccc);
+}
+
+.dojutsu-card.rinnegan::before {
+    background: linear-gradient(45deg, #8a2be2, #9370db);
+}
+
+.dojutsu-card:hover {
+    transform: translateY(-5px);
+    border-color: #8a2be2;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.dojutsu-card:hover::before {
+    opacity: 0.1;
+}
+
+.dojutsu-card h4 {
+    color: #8a2be2;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.dojutsu-techniques {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.technique-item {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.technique-item h5 {
+    color: #8a2be2;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.technique-item p {
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* 仙术卡片 */
+.senjutsu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.senjutsu-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.senjutsu-card:hover {
+    transform: translateY(-5px);
+    border-color: #8a2be2;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.2);
+}
+
+.senjutsu-card h4 {
+    color: #8a2be2;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.senjutsu-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.sage-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.sage-master,
+.sage-user,
+.sage-feature {
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: #dda0dd;
+    font-size: 0.9rem;
+}
+
+/* 禁术与秘术 */
+.forbidden-jutsu {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.forbidden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.forbidden-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #660000;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.forbidden-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #660000, #990000);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.forbidden-card:hover {
+    transform: translateY(-10px);
+    border-color: #cc0000;
+    box-shadow: 0 20px 40px rgba(204, 0, 0, 0.3);
+}
+
+.forbidden-card:hover::before {
+    opacity: 0.1;
+}
+
+.forbidden-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.forbidden-header h3 {
+    color: #ff6666;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.danger-level {
+    background: linear-gradient(45deg, #cc0000, #ff0000);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+}
+
+.forbidden-content p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.jutsu-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid #660000;
+}
+
+.req-label {
+    color: #ff6666;
+    font-weight: 600;
+    min-width: 60px;
+}
+
+.req-value {
+    color: #fff;
+    font-weight: 500;
+}
+
+.jutsu-users h4 {
+    color: #ff6666;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.user-tag {
+    background: linear-gradient(45deg, #660000, #990000);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(102, 0, 0, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .jutsu-item {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .jutsu-visual {
+        height: 300px;
+    }
+    
+    .jutsu-description {
+        padding: 2rem;
+    }
+    
+    .jutsu-info h3 {
+        font-size: 2rem;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .jutsu-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .jutsu-nav-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .element-grid,
+    .taijutsu-grid,
+    .genjutsu-grid,
+    .kekkei-grid,
+    .dojutsu-grid,
+    .senjutsu-grid,
+    .forbidden-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hand-seals {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .seal-sequence {
+        flex-wrap: wrap;
+    }
+    
+    .forbidden-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

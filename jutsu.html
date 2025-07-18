@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忍术卷轴 - 火影忍者</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jutsu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logos/konoha-logo.png" alt="木叶标志">
+                <span>火影忍者</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">忍者列传</a></li>
+                <li><a href="world.html">世界探秘</a></li>
+                <li><a href="jutsu.html" class="active">忍术卷轴</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h1>忍术卷轴</h1>
+            <p>探索忍者世界的各种神奇忍术</p>
+        </div>
+    </header>
+
+    <!-- 第一屏：标志性忍术展示 -->
+    <section class="signature-jutsu">
+        <div class="container">
+            <h2 class="section-title">标志性忍术</h2>
+            <div class="jutsu-showcase">
+                <div class="jutsu-item active" data-jutsu="rasengan">
+                    <div class="jutsu-visual">
+                        <img src="images/jutsu_animations/rasengan.gif" alt="螺旋丸">
+                        <div class="jutsu-overlay">
+                            <div class="jutsu-info">
+                                <h3>螺旋丸</h3>
+                                <p class="jutsu-japanese">らせんがん (Rasengan)</p>
+                                <p class="jutsu-rank">A级忍术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jutsu-description">
+                        <p>四代火影开发的无印忍术，将查克拉高速旋转形成球状，具有强大的破坏力。</p>
+                        <div class="hand-seals">
+                            <span>结印：</span>
+                            <span class="seal-info">无需结印</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="jutsu-item" data-jutsu="chidori">
+                    <div class="jutsu-visual">
+                        <img src="images/jutsu_animations/chidori.gif" alt="千鸟">
+                        <div class="jutsu-overlay">
+                            <div class="jutsu-info">
+                                <h3>千鸟</h3>
+                                <p class="jutsu-japanese">ちどり (Chidori)</p>
+                                <p class="jutsu-rank">A级忍术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jutsu-description">
+                        <p>卡卡西创造的雷遁忍术，将雷属性查克拉集中在手上，发出千鸟鸣叫般的声音。</p>
+                        <div class="hand-seals">
+                            <span>结印：</span>
+                            <div class="seal-sequence">
+                                <span class="seal">丑</span>
+                                <span class="seal">申</span>
+                                <span class="seal">酉</span>
+                                <span class="seal">子</span>
+                                <span class="seal">午</span>
+                                <span class="seal">亥</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="jutsu-item" data-jutsu="kage-bunshin">
+                    <div class="jutsu-visual">
+                        <img src="images/jutsu_animations/shadow-clone.gif" alt="影分身">
+                        <div class="jutsu-overlay">
+                            <div class="jutsu-info">
+                                <h3>影分身之术</h3>
+                                <p class="jutsu-japanese">かげぶんしん (Kage Bunshin)</p>
+                                <p class="jutsu-rank">B级忍术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jutsu-description">
+                        <p>创造出具有实体的分身，可以独立行动和思考，解除时经验会回到本体。</p>
+                        <div class="hand-seals">
+                            <span>结印：</span>
+                            <div class="seal-sequence">
+                                <span class="seal">壬</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="jutsu-item" data-jutsu="shinra-tensei">
+                    <div class="jutsu-visual">
+                        <img src="images/jutsu_animations/shinra-tensei.gif" alt="神罗天征">
+                        <div class="jutsu-overlay">
+                            <div class="jutsu-info">
+                                <h3>神罗天征</h3>
+                                <p class="jutsu-japanese">しんらてんせい (Shinra Tensei)</p>
+                                <p class="jutsu-rank">S级忍术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jutsu-description">
+                        <p>轮回眼的能力之一，可以产生强大的斥力，推开或摧毁周围的一切物体。</p>
+                        <div class="hand-seals">
+                            <span>结印：</span>
+                            <span class="seal-info">瞳术 - 无需结印</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="jutsu-item" data-jutsu="chibaku-tensei">
+                    <div class="jutsu-visual">
+                        <img src="images/jutsu_animations/chibaku-tensei.gif" alt="地爆天星">
+                        <div class="jutsu-overlay">
+                            <div class="jutsu-info">
+                                <h3>地爆天星</h3>
+                                <p class="jutsu-japanese">ちばくてんせい (Chibaku Tensei)</p>
+                                <p class="jutsu-rank">S级忍术</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jutsu-description">
+                        <p>轮回眼的究极忍术，创造一个重力球吸引周围的物质，形成巨大的石球。</p>
+                        <div class="hand-seals">
+                            <span>结印：</span>
+                            <span class="seal-info">瞳术 - 双手合十</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="jutsu-navigation">
+                <button class="jutsu-nav-btn active" data-target="rasengan">螺旋丸</button>
+                <button class="jutsu-nav-btn" data-target="chidori">千鸟</button>
+                <button class="jutsu-nav-btn" data-target="kage-bunshin">影分身</button>
+                <button class="jutsu-nav-btn" data-target="shinra-tensei">神罗天征</button>
+                <button class="jutsu-nav-btn" data-target="chibaku-tensei">地爆天星</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：忍术系统分类 -->
+    <section class="jutsu-categories">
+        <div class="container">
+            <h2 class="section-title">忍术系统分类</h2>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="ninjutsu">忍术</button>
+                <button class="tab-btn" data-category="taijutsu">体术</button>
+                <button class="tab-btn" data-category="genjutsu">幻术</button>
+                <button class="tab-btn" data-category="kekkei-genkai">血继限界</button>
+                <button class="tab-btn" data-category="dojutsu">瞳术</button>
+                <button class="tab-btn" data-category="senjutsu">仙术</button>
+            </div>
+            
+            <div class="category-content">
+                <!-- 忍术 -->
+                <div class="category-panel active" data-category="ninjutsu">
+                    <h3>忍术 (Ninjutsu)</h3>
+                    <p>通过查克拉施展的各种术式，按照查克拉属性分为五大类</p>
+                    <div class="element-grid">
+                        <div class="element-card fire">
+                            <div class="element-icon">🔥</div>
+                            <h4>火遁</h4>
+                            <div class="jutsu-list">
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">豪火球之术</span>
+                                    <span class="jutsu-user">宇智波一族</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">凤仙火之术</span>
+                                    <span class="jutsu-user">宇智波佐助</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">豪龙火之术</span>
+                                    <span class="jutsu-user">宇智波佐助</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">天照</span>
+                                    <span class="jutsu-user">万花筒写轮眼</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="element-card water">
+                            <div class="element-icon">🌊</div>
+                            <h4>水遁</h4>
+                            <div class="jutsu-list">
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">水龙弹之术</span>
+                                    <span class="jutsu-user">卡卡西</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">水牢之术</span>
+                                    <span class="jutsu-user">再不斩</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">大爆水冲波</span>
+                                    <span class="jutsu-user">鬼鲛</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">水遁·大瀑布之术</span>
+                                    <span class="jutsu-user">扉间</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="element-card earth">
+                            <div class="element-icon">🗻</div>
+                            <h4>土遁</h4>
+                            <div class="jutsu-list">
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">土流壁</span>
+                                    <span class="jutsu-user">卡卡西</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">土遁·心中斩首之术</span>
+                                    <span class="jutsu-user">卡卡西</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">超轻重岩之术</span>
+                                    <span class="jutsu-user">大野木</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">土遁·岩宿崩し</span>
+                                    <span class="jutsu-user">岩隐忍者</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="element-card wind">
+                            <div class="element-icon">🌪️</div>
+                            <h4>风遁</h4>
+                            <div class="jutsu-list">
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">风遁·螺旋手里剑</span>
+                                    <span class="jutsu-user">鸣人</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">风遁·真空玉</span>
+                                    <span class="jutsu-user">团藏</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">风遁·大突破</span>
+                                    <span class="jutsu-user">奈良鹿丸</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">风遁·压害</span>
+                                    <span class="jutsu-user">团藏</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="element-card lightning">
+                            <div class="element-icon">⚡</div>
+                            <h4>雷遁</h4>
+                            <div class="jutsu-list">
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">雷切</span>
+                                    <span class="jutsu-user">卡卡西</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">雷遁·雷兽追牙</span>
+                                    <span class="jutsu-user">卡卡西</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">雷遁铠甲</span>
+                                    <span class="jutsu-user">雷影</span>
+                                </div>
+                                <div class="jutsu-entry">
+                                    <span class="jutsu-name">麒麟</span>
+                                    <span class="jutsu-user">宇智波佐助</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 体术 -->
+                <div class="category-panel" data-category="taijutsu">
+                    <h3>体术 (Taijutsu)</h3>
+                    <p>运用身体技巧和查克拉进行近身战斗的武术</p>
+                    <div class="taijutsu-grid">
+                        <div class="taijutsu-card">
+                            <h4>八门遁甲</h4>
+                            <p>通过开启身体的八个门来临时提升实力的禁术</p>
+                            <div class="gates-list">
+                                <div class="gate">开门 - 解除大脑限制</div>
+                                <div class="gate">休门 - 解除体力限制</div>
+                                <div class="gate">生门 - 解除疲劳限制</div>
+                                <div class="gate">伤门 - 解除痛感限制</div>
+                                <div class="gate">杜门 - 解除速度限制</div>
+                                <div class="gate">景门 - 解除力量限制</div>
+                                <div class="gate">惊门 - 解除查克拉限制</div>
+                                <div class="gate">死门 - 解除生命限制</div>
+                            </div>
+                        </div>
+                        
+                        <div class="taijutsu-card">
+                            <h4>柔拳</h4>
+                            <p>日向一族的专有体术，配合白眼使用</p>
+                            <div class="technique-list">
+                                <div class="technique">八卦掌 - 基础掌法</div>
+                                <div class="technique">八卦·六十四掌 - 连续攻击</div>
+                                <div class="technique">八卦·一百二十八掌 - 高级连击</div>
+                                <div class="technique">八卦掌·回天 - 绝对防御</div>
+                            </div>
+                        </div>
+                        
+                        <div class="taijutsu-card">
+                            <h4>刚拳</h4>
+                            <p>以力量和速度为主的直接攻击体术</p>
+                            <div class="technique-list">
+                                <div class="technique">木叶旋风 - 基础踢击</div>
+                                <div class="technique">木叶大旋风 - 强力踢击</div>
+                                <div class="technique">表莲华 - 高速体术</div>
+                                <div class="technique">里莲华 - 禁术级体术</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 幻术 -->
+                <div class="category-panel" data-category="genjutsu">
+                    <h3>幻术 (Genjutsu)</h3>
+                    <p>通过扰乱对手的五感来创造幻觉的术式</p>
+                    <div class="genjutsu-grid">
+                        <div class="genjutsu-card">
+                            <h4>月读</h4>
+                            <p>万花筒写轮眼的最强幻术，可以控制幻境中的时间</p>
+                            <div class="jutsu-details">
+                                <span class="detail-label">施术者:</span>
+                                <span class="detail-value">宇智波鼬</span>
+                            </div>
+                        </div>
+                        
+                        <div class="genjutsu-card">
+                            <h4>别天神</h4>
+                            <p>宇智波止水的万花筒写轮眼能力，可以永久改变他人意志</p>
+                            <div class="jutsu-details">
+                                <span class="detail-label">施术者:</span>
+                                <span class="detail-value">宇智波止水</span>
+                            </div>
+                        </div>
+                        
+                        <div class="genjutsu-card">
+                            <h4>奈落见之术</h4>
+                            <p>让对手看到自己最恐惧的场景</p>
+                            <div class="jutsu-details">
+                                <span class="detail-label">施术者:</span>
+                                <span class="detail-value">卡卡西</span>
+                            </div>
+                        </div>
+                        
+                        <div class="genjutsu-card">
+                            <h4>魔幻·树缚杀</h4>
+                            <p>让对手产生被大树缠绕的幻觉</p>
+                            <div class="jutsu-details">
+                                <span class="detail-label">施术者:</span>
+                                <span class="detail-value">夕日红</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 血继限界 -->
+                <div class="category-panel" data-category="kekkei-genkai">
+                    <h3>血继限界 (Kekkei Genkai)</h3>
+                    <p>只有特定血统才能使用的特殊能力</p>
+                    <div class="kekkei-grid">
+                        <div class="kekkei-card">
+                            <h4>写轮眼</h4>
+                            <p>宇智波一族的瞳术血继限界</p>
+                            <div class="evolution-stages">
+                                <div class="stage">一勾玉 → 二勾玉 → 三勾玉 → 万花筒</div>
+                            </div>
+                        </div>
+                        
+                        <div class="kekkei-card">
+                            <h4>白眼</h4>
+                            <p>日向一族的瞳术血继限界，拥有透视和远视能力</p>
+                            <div class="abilities">
+                                <span class="ability">360度视野</span>
+                                <span class="ability">查克拉络系统</span>
+                                <span class="ability">远距离观察</span>
+                            </div>
+                        </div>
+                        
+                        <div class="kekkei-card">
+                            <h4>尸骨脉</h4>
+                            <p>辉夜一族的血继限界，可以操控骨骼</p>
+                            <div class="abilities">
+                                <span class="ability">骨质增生</span>
+                                <span class="ability">骨刃生成</span>
+                                <span class="ability">骨质硬化</span>
+                            </div>
+                        </div>
+                        
+                        <div class="kekkei-card">
+                            <h4>冰遁</h4>
+                            <p>水遁和风遁结合的血继限界</p>
+                            <div class="abilities">
+                                <span class="ability">冰晶制造</span>
+                                <span class="ability">冰镜术</span>
+                                <span class="ability">冰针攻击</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 瞳术 -->
+                <div class="category-panel" data-category="dojutsu">
+                    <h3>瞳术 (Dōjutsu)</h3>
+                    <p>通过特殊眼睛施展的忍术</p>
+                    <div class="dojutsu-grid">
+                        <div class="dojutsu-card sharingan">
+                            <h4>写轮眼三大瞳术</h4>
+                            <div class="dojutsu-techniques">
+                                <div class="technique-item">
+                                    <h5>洞察眼</h5>
+                                    <p>看穿对手的动作和忍术</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h5>催眠眼</h5>
+                                    <p>控制对手的行动</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h5>复制眼</h5>
+                                    <p>复制对手的忍术</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dojutsu-card byakugan">
+                            <h4>白眼</h4>
+                            <div class="dojutsu-techniques">
+                                <div class="technique-item">
+                                    <h5>透视</h5>
+                                    <p>看穿物体内部结构</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h5>远视</h5>
+                                    <p>观察远距离目标</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h5>查克拉络</h5>
+                                    <p>看见查克拉流动</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dojutsu-card rinnegan">
+                            <h4>轮回眼</h4>
+                            <div class="dojutsu-techniques">
+                                <div class="technique-item">
+                                    <h5>六道之术</h5>
+                                    <p>天道、修罗道、人间道、畜生道、饿鬼道、地狱道</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h5>外道之术</h5>
+                                    <p>生死轮回的究极力量</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 仙术 -->
+                <div class="category-panel" data-category="senjutsu">
+                    <h3>仙术 (Senjutsu)</h3>
+                    <p>通过感知自然能量进入仙人模式的特殊忍术</p>
+                    <div class="senjutsu-grid">
+                        <div class="senjutsu-card">
+                            <h4>妙木山仙术</h4>
+                            <p>蛤蟆仙人传承的仙术</p>
+                            <div class="sage-info">
+                                <div class="sage-master">仙人：大蛤蟆仙人</div>
+                                <div class="sage-user">修行者：自来也、鸣人</div>
+                                <div class="sage-feature">特征：眼周橙色纹路</div>
+                            </div>
+                        </div>
+                        
+                        <div class="senjutsu-card">
+                            <h4>龙地洞仙术</h4>
+                            <p>白蛇仙人传承的仙术</p>
+                            <div class="sage-info">
+                                <div class="sage-master">仙人：白蛇仙人</div>
+                                <div class="sage-user">修行者：大蛇丸、兜</div>
+                                <div class="sage-feature">特征：蛇类外貌变化</div>
+                            </div>
+                        </div>
+                        
+                        <div class="senjutsu-card">
+                            <h4>湿骨林仙术</h4>
+                            <p>蛞蝓仙人传承的仙术</p>
+                            <div class="sage-info">
+                                <div class="sage-master">仙人：蛞蝓仙人</div>
+                                <div class="sage-user">修行者：纲手</div>
+                                <div class="sage-feature">特征：治疗能力增强</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：禁术与秘术 -->
+    <section class="forbidden-jutsu">
+        <div class="container">
+            <h2 class="section-title">禁术与秘术</h2>
+            <div class="forbidden-grid">
+                <div class="forbidden-card">
+                    <div class="forbidden-header">
+                        <h3>秽土转生</h3>
+                        <span class="danger-level">危险度：S</span>
+                    </div>
+                    <div class="forbidden-content">
+                        <p>二代火影开发的禁术，可以召唤死者的灵魂回到现世战斗</p>
+                        <div class="jutsu-requirements">
+                            <div class="requirement">
+                                <span class="req-label">需要：</span>
+                                <span class="req-value">死者DNA + 活人祭品</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-label">风险：</span>
+                                <span class="req-value">不死不灭的傀儡军团</span>
+                            </div>
+                        </div>
+                        <div class="jutsu-users">
+                            <h4>使用者</h4>
+                            <span class="user-tag">千手扉间</span>
+                            <span class="user-tag">大蛇丸</span>
+                            <span class="user-tag">兜</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forbidden-card">
+                    <div class="forbidden-header">
+                        <h3>己生转生</h3>
+                        <span class="danger-level">危险度：S</span>
+                    </div>
+                    <div class="forbidden-content">
+                        <p>千代婆婆的禁术，可以复活死者，但施术者会失去生命</p>
+                        <div class="jutsu-requirements">
+                            <div class="requirement">
+                                <span class="req-label">代价：</span>
+                                <span class="req-value">施术者的生命</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-label">效果：</span>
+                                <span class="req-value">完全复活目标</span>
+                            </div>
+                        </div>
+                        <div class="jutsu-users">
+                            <h4>使用者</h4>
+                            <span class="user-tag">千代</span>
+                            <span class="user-tag">长门</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forbidden-card">
+                    <div class="forbidden-header">
+                        <h3>八门遁甲之阵</h3>
+                        <span class="danger-level">危险度：S</span>
+                    </div>
+                    <div class="forbidden-content">
+                        <p>开启第八门"死门"的终极体术，拥有超越影级的力量</p>
+                        <div class="jutsu-requirements">
+                            <div class="requirement">
+                                <span class="req-label">代价：</span>
+                                <span class="req-value">施术者必死</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-label">力量：</span>
+                                <span class="req-value">超越影级</span>
+                            </div>
+                        </div>
+                        <div class="jutsu-users">
+                            <h4>使用者</h4>
+                            <span class="user-tag">迈特·戴</span>
+                            <span class="user-tag">迈特·凯</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forbidden-card">
+                    <div class="forbidden-header">
+                        <h3>伊邪那岐</h3>
+                        <span class="danger-level">危险度：S</span>
+                    </div>
+                    <div class="forbidden-content">
+                        <p>宇智波一族的究极幻术，可以将现实变为幻象</p>
+                        <div class="jutsu-requirements">
+                            <div class="requirement">
+                                <span class="req-label">代价：</span>
+                                <span class="req-value">写轮眼永久失明</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-label">效果：</span>
+                                <span class="req-value">改写现实</span>
+                            </div>
+                        </div>
+                        <div class="jutsu-users">
+                            <h4>使用者</h4>
+                            <span class="user-tag">宇智波带土</span>
+                            <span class="user-tag">团藏</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>火影忍者</h4>
+                    <p>传承火之意志，探索忍者世界</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="characters.html">忍者列传</a></li>
+                        <li><a href="world.html">世界探秘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <p>Email: info@naruto-world.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 火影忍者主题网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/jutsu.js"></script>
+</body>
+</html>
